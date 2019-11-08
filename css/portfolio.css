@@ -1,0 +1,724 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.skip a {
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  /*Your code here - position relative to the parent */
+  
+  top: -40px;
+  /*Your code here - place 40px higher */
+  ;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 2;
+
+}
+/*Your code here*/
+/*Add the selector and rule to move the skip link in focus to the exact top.*/
+.skip a:focus {
+  top: 0;
+}
+:focus {
+  /* Add the selector and code to put a 2px black border around all elements in focus.* */
+  /* border: 2px solid black; */
+  outline: none;
+}
+li a:focus,li a:hover{
+  background-color: rgb(124, 124, 124);
+  color:whitesmoke;
+  /* border:solid 2px black; */
+  text-decoration: underline;
+}
+nav ul li a.current{
+  background-color: black;
+  color:whitesmoke;
+  font-weight: bold;
+}
+
+header{
+  position: relative;
+  /* margin:0 auto; */
+  height: 50px;
+  background-color: black;
+}
+
+nav ul{
+  position:absolute;
+  right: 0;
+  top:50px;
+  border-bottom:solid 2px white;
+  
+}
+
+nav ul li a{
+  box-sizing: border-box;
+  color:white;
+  background-color:rgba(156, 152, 88, 0.603);
+  display:inline-block;
+  font-size:15px;
+  width:80px;
+  height:30px;
+  text-decoration: none;
+  border-top:solid 2px white;
+  border-left:solid 2px white;
+  border-right:solid 2px white;
+}
+
+
+h1 {
+  color:white;
+  top:50%;
+  font-size: 30px;
+  line-height: 50px;
+  margin:auto 0;
+  text-align: center;
+  /* Shenhao's Portfolio */
+}
+
+
+
+.home-image{
+  position: relative;
+  height:100vh;
+  background-color: black;
+  background-image: url("../images/leaves.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home-image p{
+  background-color: rgba(164, 173, 108, 0.719);
+  position:absolute;
+  text-align: center;
+  letter-spacing: 0;
+  font-weight: 200;
+  line-height: 1; 
+  padding: 0;
+  top:30vh;
+ width:50%;
+  left: 49%;
+  margin-left: -25%;
+  border:solid 0.05em rgba(255, 255, 255, 0.719);
+  color:rgba(255, 255, 255, 0.863);
+  font-size:8vw;
+}
+
+/* mouseicon */
+a.mouse-scroll{
+text-align: center;
+box-sizing: border-box;
+background-color: transparent;
+outline: none;
+position: absolute;
+bottom: 30px;
+left: 50%;
+margin-left: -17px;
+line-height: 18px;
+font-size: 13px;
+font-weight: 400;
+color: #FFF;
+letter-spacing: 2px;
+margin-top: 10%;
+text-decoration: none;
+overflow: hidden;
+display: inline-block;
+}
+
+.mouse-scroll .mouse{ 
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #FFF;
+  letter-spacing: 2px;
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 48px;
+  margin: 0 auto 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba(255,255,255,.64);
+  border-radius: 18px;
+}
+
+.mouse-scroll .mouse .mouse-movement{
+  text-align: center;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #399670;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 5px;
+  height: 6px;
+  margin: -3px 0 0 -3px;
+  background: #FFF;
+  border-radius: 50%;
+  animation: scroll-verticle 2s linear infinite;
+}
+
+@keyframes scroll-verticle{
+  0%{
+    opacity: 1;
+    top: 25%;
+  }
+  25%{
+    opacity:1;
+    top:50%;
+  }
+  100%{
+    opacity:0;
+    top:50%;
+  }
+}
+
+
+footer{
+    height:30px;
+     margin: 0;
+     padding: 0;
+     border: 0;
+     outline: 0;
+     background: transparent;
+     display: block;
+     position:relative;
+     background-color: black;
+     min-height: 60px;
+     width: 100%;
+     text-align: center;
+   }
+   
+   footer p{
+     font-size: 20px;
+     color:white;
+     line-height:60px;
+     vertical-align: middle;
+   }
+   
+   .projects{
+       background-color: white;
+   }
+   .projects h2{
+    width:70%;
+  
+    line-height: 40px;
+    font-size: 30px;
+    text-align: center;
+    margin:10px auto;
+    background-color:rgb(230, 199, 61);
+   border: solid 4px #1a4585;
+    box-shadow: 4px 4px #5188da;
+    
+   }
+   
+
+   .UX,.ME{
+       background-color:rgb(197, 211, 219);
+       border: solid 2px black;
+   }
+
+   .UX,.ME{
+        text-align: center;
+   }
+
+   /* .UX h2,.ME h2{
+    color:rgb(230, 199, 61);
+       background-color:#5188da;
+       box-shadow: 4px 4px #0b2f64;
+   } */
+
+   .UX .dietme .title{
+     color:rgb(196, 161, 4);
+     font-weight: bolder;
+   }
+
+   .UX h3,.ME h3,.UX h4{
+    width: fit-content;
+    margin:10px auto;
+    padding:0 10px;
+    line-height:30px;
+    text-align: center;
+    background-color:rgb(230, 199, 61);
+    box-shadow: 4px 4px rgb(124, 102, 5);
+   }
+
+   .UX h6{
+
+    font-size:25px;
+    width: fit-content;
+    margin:0 auto;
+    margin-bottom:10px;
+    padding:0 10px;
+    line-height:30px;
+    text-align: center;
+    background-color:#5188da;
+    box-shadow: 4px 4px #0b2f64;
+   }
+
+
+   .problem,.competetive,.sketch,.sketch_image,.storyboards,.storyboards_image,.UX div.dietme>p{
+     box-sizing: border-box;
+    background-color:rgb(248, 249, 250);
+    border: solid 4px #1a4585;
+     width:90%;
+     margin:20px auto;
+     padding: 20px;
+     box-shadow: 4px 4px #5188da;
+   }
+
+.sketch_image,.storyboards_image{
+  padding:0;
+}
+
+   .sketch_image .container li a:hover,
+   .sketch_image .container li a:focus{
+    background-color: rgba(248, 249, 250, 0);
+   }
+   
+
+
+   .UX h6{
+
+    font-size:25px;
+   }
+  .UX p{
+    font-size:23px;
+  }
+  .UX h2{
+
+    font-size: 40px;
+  }
+  .UX h3{
+
+    font-size: 35px;
+  }
+  .UX h4{
+
+    font-size: 30px;
+  }
+      
+
+   *{margin: 0; padding: 0;}
+   body{background-color: black;}
+.container
+{
+	width: 100%;
+   
+    /* display:flexbox; */
+    text-align:center;
+     width:100%;
+     background-color: rgb(236, 214, 114);
+     z-index:1;
+}
+
+.container h6{
+    width:50%;
+    margin:5px auto;
+}
+.trans
+{
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  z-index:999;
+}
+.top
+{
+	display: flex;
+    margin: 0 auto;
+}
+.top ul
+{
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	box-sizing: border-box;
+}
+.top ul li
+{
+	position: relative;
+    display:inline-block;
+	width: 30%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.top ul li::before,.top ul li::after
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	content: '';
+	color: white;
+	opacity: 0;
+	text-align: center;
+	/* box-sizing: border-box; */
+	pointer-events: none;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+
+
+.top ul li:hover::before,.top ul li:hover::after,.top ul li:focus::before,.top ul li:focus::after
+{
+    opacity:0.3;
+    /* border: solid 3px black; */
+	background-color: rgba(196, 165, 30, 0.9);
+}
+
+.top ul li a{
+  display:inline-block;
+}
+
+.top ul li a::before,.top ul li a::after
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	content: '';
+	color: white;
+	opacity: 0;
+	text-align: center;
+	/* box-sizing: border-box; */
+	pointer-events: none;
+	transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+}
+
+
+
+.top ul li a:focus::before,.top ul li a:focus::after
+{
+    opacity:0.3;
+    /* border: solid 3px black; */
+	background-color: rgba(196, 165, 30, 0.9);
+}
+
+
+.top ul li img
+{
+	width: 100%;
+	height: 20vmin;
+  overflow: hidden;
+  z-index: 1;
+}
+.lightbox
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.75);
+	z-index:  999;
+	opacity: 0;
+	pointer-events: none;
+}
+.lightbox img
+{
+	max-width: 90%;
+	max-height: 80%;
+	position: relative;
+  top: -100%;
+	/* Transition */
+	transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+.lightbox:target
+{
+	outline: none;
+	top: 0;
+	opacity: 1;
+	pointer-events: auto;
+	transition: all 1.2s ease;
+	-moz-transition: all 1.2s ease;
+	-ms-transition: all 1.2s ease;
+	-o-transition: all 1.2s ease;
+	-webkit-transition: all 1.2s ease;
+}
+.lightbox:target img
+{
+	top: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+      
+      
+    
+  
+
+   .undergraduate .skills .Modeling, .undergraduate .skills .programming, .undergraduate .skills .Data{
+    background-color:rgb(248, 249, 250);
+    border: solid 2px black;
+    width:400px;
+    margin:5px auto;
+   }
+
+    .container{
+    display:flex;
+    flex-wrap:wrap;
+   }
+
+   .courses .inquiry, .courses .web_design, .courses .python, .courses .human_behavior, .courses .interaction_design{
+    background-color:rgb(248, 249, 250);
+    border: solid 2px black;
+    width:400px;
+    margin:5px auto;
+   }
+
+
+   .ME .workflow .step{
+  display:inline-block;
+  width:100px;
+}
+
+.ME .workflow .container{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  background-color: rgb(189, 221, 243);
+  justify-self:center;
+}
+
+.workflow .step i{
+  font-size: 60px;
+  width:70%;
+  margin:5px auto;
+}
+.workflow .step h4{
+  font-size: 20px;
+}
+.workflow .step{
+  text-align: center;
+}
+
+   /* Your code here */
+   @media screen and (min-width: 500px) and (max-width:970px){
+   nav ul{
+    position:absolute;
+    top:40px;
+    line-height: 50px;
+    border:none;
+    
+    margin:0 auto;
+  }
+  
+  nav ul li{
+    display:inline-block;
+    box-sizing: border-box;
+    color: white;
+    letter-spacing: 0;
+    border:none;
+    margin:none;
+  }
+  
+  nav ul li a{
+    background-color:black;
+    color:white;
+    display:inline-block;
+    padding:auto 0;
+    text-decoration: none;
+    text-align: center;
+    /* border: none; */
+    margin:none;
+    width:18vw;
+    line-height: 30px;
+    height: 30px;
+    border:solid 2px white;
+  }
+
+  nav ul li a:focus, nav ul li a:hover{
+    background-color:  rgba(214, 214, 214, 0.877);
+    color:black;
+    border-color: black;
+    text-decoration: underline;
+  }
+  
+   nav ul li a.current{
+    background-color: rgb(255, 255, 255);
+    color:black;
+    border-color: black;
+    font-weight: bold;
+  }
+  
+  h1 {
+    color:white;
+    top:50%;
+    font-size: 30px;
+    line-height: 50px;
+    margin:none; 
+    text-align: center;
+    /* Shenhao's Portfolio */
+  }
+  .dietme .process{
+    display:grid;
+    grid-template-columns: 47vw 47vw;
+    column-gap: 10px;
+  }
+  .problem{
+    grid-column: 1/2;
+    width:100%;
+  }
+  .competetive{
+    grid-column: 2/3;
+    width:100%;
+  }
+  .sketch{
+    grid-column: 1/2;
+    grid-row:2/3;
+    width:100%;
+  }
+  .sketch_image{
+    grid-column: 2/3;
+    grid-row:2/3;
+    width:100%;
+  }
+  .storyboards{
+    grid-column: 2/3;
+    grid-row:3/4;
+    width:100%;
+  }
+  .storyboards_image{
+    grid-column: 1/2;
+    grid-row:3/4;
+    width:100%;
+  }
+}
+   @media screen and (min-width: 970px)
+   {
+     nav ul{
+       position:absolute;
+       top:0;
+       right: 0;
+       line-height: 50px;
+       border:none;
+       width:auto ;
+     }
+     
+     nav ul li{
+       display:inline-block;
+       color: white;
+       letter-spacing: 0;
+       height: 10px;
+       margin-right:2em;
+       border:none;
+     }
+     
+     nav ul li a{
+       width:90px;
+       height:50px;
+       background-color:rgba(156, 152, 88, 0);
+       color:white;
+       display:inline-block;
+       padding:auto 0;
+       text-decoration: none;
+       text-align: center;
+       border: none;
+     }
+     
+     h1 {
+       color:white;
+       top:50%;
+       font-size: 30px;
+       line-height: 50px;
+       margin:none; 
+       text-align: left;
+       /* Shenhao's Portfolio */
+     }
+   
+     nav ul li a:focus, nav ul li a:hover{
+      background-color: rgb(218, 218, 218);
+      color:black;
+      border-color: yellow;
+      text-decoration: underline;
+    }
+  
+     nav ul li a.current{
+      background-color: rgb(255, 255, 255);
+      color:black;
+      border-color: black;
+      font-weight: bold;
+    }
+     .dietme .process{
+      display:grid;
+      grid-template-columns: 47vw 47vw;
+      column-gap: 10px;
+    }
+    .problem{
+      grid-column: 1/2;
+      width:100%;
+    }
+    .competetive{
+      grid-column: 2/3;
+      width:100%;
+    }
+    .sketch{
+      grid-column: 1/2;
+      grid-row:2/3;
+      width:100%;
+    }
+    .sketch_image{
+      grid-column: 2/3;
+      grid-row:2/3;
+      width:100%;
+    }
+    .storyboards{
+      grid-column: 2/3;
+      grid-row:3/4;
+      width:100%;
+    }
+    .storyboards_image{
+      grid-column: 1/2;
+      grid-row:3/4;
+      width:100%;
+    }
+    .projects h2{
+      width:600px;
+    }
+
+
+  }
+      
+
