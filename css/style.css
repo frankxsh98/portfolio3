@@ -516,7 +516,7 @@ h1 {
 
 @media all and (device-width: 414px) and (device-height: 736px) and (orientation:portrait){
   .home-image{ 
-    background-attachment:none;
+    background-attachment:scroll;
     height: 736px;
   }
 }
