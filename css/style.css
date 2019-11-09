@@ -118,7 +118,7 @@ h1 {
   color:rgba(255, 255, 255, 0.863);
 
   font-size:8vw;
-  /* font-weight: bold; */
+  /* font-weight: bold;
   text-shadow: 
   0 1px 0 #ccc, 
   0 2px 0 #c9c9c9, 
@@ -131,18 +131,18 @@ h1 {
   0 3px 5px rgba(0,0,0,.2), 
   0 5px 10px rgba(0,0,0,.25), 
   0 10px 10px rgba(0,0,0,.2), 
-  0 20px 20px rgba(0,0,0,.15);
+  0 20px 20px rgba(0,0,0,.15); */
 
   /* text-shadow: 
       -1px -1px 1px #111, 
       2px 2px 1px #363636; */
 
-      /* color: #2c2c2cc9;
- 
+      color:rgba(255, 255, 255);
+
     letter-spacing: .05em;
     text-shadow: 
-      4px 4px 0px #d5d5d5, 
-      7px 7px 0px rgba(0, 0, 0, 0.2); */
+      4px 4px 4px rgba(156, 152, 88, 0.603),
+      7px 7px 0px rgba(0, 0, 0, 0.2);
 
       /* letter-spacing: .1em;
       text-shadow: 
@@ -511,5 +511,11 @@ h1 {
   .contact.text,.contact_image{
     grid-column:4/-1;
     grid-row:2/3;
+  }
+}
+
+@media all and (device-width: 414px) and (device-height: 736px) and (orientation:portrait){
+  .home-image{ 
+    height: 736px;
   }
 }
