@@ -91,7 +91,7 @@ h1 {
 
 .home-image{
   position: relative;
-  height:100vh;
+  height: 736px;
   background-color: black;
   background-image: url("../images/main_page.png");
   background-attachment: fixed;
