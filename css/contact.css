@@ -3,7 +3,7 @@ html {
   }
   
   body {
-    background-color: #ddd;
+    background-color: rgb(250, 250, 250);
     font-size: 18px;
     margin: 0;
     padding: 0;
@@ -148,6 +148,9 @@ html {
     border: 2px solid rgba(255,255,255,.64);
     border-radius: 18px;
   }
+  .mouse-scroll .text{
+    display:none;
+  }
   
   .mouse-scroll .mouse .mouse-movement{
     text-align: center;
@@ -207,6 +210,106 @@ html {
     line-height:60px;
     vertical-align: middle;
   }
+
+
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+    padding-left:2%;
+}
+
+form {
+  width:90%;
+  margin:20px auto;
+  background-color: white;
+  border: solid 4px rgb(171, 171, 172);
+  border-radius: 10px;
+}
+
+form legend{
+  width:60%;
+  margin:5px auto;
+  text-align: center;
+}
+
+form legend h1{
+  color:black;
+}
+
+form label{
+  display:inline-block;
+  width:40%;
+  line-height: 30px;
+  font-size: 20px;
+  width:95%;
+  margin-left:5px;
+
+  /* border: solid 5px black; */
+}
+
+form div{
+    display:inline-block;
+    width: 100%;
+
+}
+
+form input{
+  display:block;
+  border: solid 2px rgb(196, 196, 196);
+  border-radius: 4px;
+  width:95%;
+  margin:0 5px;
+  height:35px;
+  line-height: 30px;
+  resize: vertical;
+}
+
+form input:focus{
+  border: solid 2px rgb(122, 138, 233);
+}
+
+form textarea{
+  width:95%;
+  margin:0 5px;
+  height:150px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+
+  resize: none;
+}
+form textarea:focus{
+  border: solid 2px rgb(40, 56, 143);
+}
+
+button.btn{        
+  color: white;     /*Why couldn't I just use button?*/
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+    height:30px;
+  background-color: #36A0FF;
+border:solid 2px #36A0FF;
+border-radius: 2px;
+}
+
+button.btn:focus, button.btn:hover{
+  border-color: rgb(40, 56, 143);
+} 
+
+.map{
+  width:80%;
+  margin:0 auto;
+  border:solid 2px #36A0FF;
+border-radius: 2px;
+overflow: hidden;
+}
+
+.map iframe{
+  width:100%;
+  height:300px;
+}
+
   @media screen and (min-width: 500px) and (max-width:970px)
 {
 nav ul{
@@ -265,6 +368,31 @@ h1 {
   text-align: center;
   /* Shenhao's Portfolio */
 }
+
+
+form {
+  display:inline-block;
+  width:40%;
+  margin:10px 10px;
+  background-color: white;
+  border: solid 4px rgb(171, 171, 172);
+  border-radius: 10px;
+}
+
+.map{
+  display:inline-block;
+  width:50%;
+  margin:0 auto;
+  border:solid 2px #36A0FF;
+border-radius: 2px;
+overflow: hidden;
+}
+
+.map iframe{
+  width:100%;
+  height:400px;
+}
+
 }
   
   @media screen and (min-width: 970px)
@@ -322,125 +450,177 @@ h1 {
       font-weight: bold;
     }
   
-    .about_me_image{
-      grid-column: 1/4;
+    form {
+      display:inline-block;
+      width:40%;
+      margin:10px 10px;
+      background-color: white;
+      border: solid 4px rgb(171, 171, 172);
+      border-radius: 10px;
     }
-    .about_me.text{
-      grid-column: 1/4;
+
+    
+form legend{
+  width:60%;
+  margin:5px auto;
+  text-align: center;
+}
+
+form legend h1{
+  color:black;
+}
+
+form label{
+  display:inline-block;
+  width:40%;
+  line-height: 30px;
+  font-size: 20px;
+  margin-left:5px;
+
+  /* border: solid 5px black; */
+}
+
+
+
+form div{
+    display:inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input{
+
+  display:inline-block;
+  border: solid 2px rgb(196, 196, 196);
+  border-radius: 4px;
+  width:50%;
+  margin:0 5px;
+  height:35px;
+  line-height: 30px;
+}
+
+
+
+form textarea{
+  display:inline-block;
+  width:50%;
+  padding:none;
+  margin:0 5px;
+}
+
+
+    
+    .map{
+      display:inline-block;
+      width:55%;
+      margin:0 auto;
+      border:solid 2px #36A0FF;
+    border-radius: 2px;
+    overflow: hidden;
     }
+    
+    .map iframe{
+      width:100%;
+      height:400px;
+    }
+  }
+  @media all and (device-width: 414px) and (device-height: 736px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 736px;
+    }
+  }
   
-    .resume_image,.resume.text{
-      grid-column:4/-1;
-      grid-row:1/2;
-    }
-  
-    .portfolio.text,.portfolio_image{
-      grid-column:1/4;
-      grid-row:2/3;
-    }
-  
-    .contact.text,.contact_image{
-      grid-column:4/-1;
-      grid-row:2/3;
+  @media all and (device-width: 414px) and (device-height: 736px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 414px;
     }
   }
   
-@media all and (device-width: 414px) and (device-height: 736px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 736px;
+  @media all and (device-width: 375px) and (device-height: 812px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 812px;
+    }
   }
-}
-
-@media all and (device-width: 414px) and (device-height: 736px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 414px;
+  
+  @media all and (device-width: 375px) and (device-height: 812px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 375px;
+    }
   }
-}
-
-@media all and (device-width: 375px) and (device-height: 812px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 812px;
+  
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 667px;
+    }
   }
-}
-
-@media all and (device-width: 375px) and (device-height: 812px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 375px;
+  
+  @media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 375px;
+    }
   }
-}
-
-@media all and (device-width: 375px) and (device-height: 667px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 667px;
+  
+  @media all and (device-width: 320px) and (device-height: 568px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 568px;
+    }
   }
-}
-
-@media all and (device-width: 375px) and (device-height: 667px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 375px;
+  
+  @media all and (device-width: 320px) and (device-height: 568px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 320px;
+    }
   }
-}
-
-@media all and (device-width: 320px) and (device-height: 568px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 568px;
+  
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 1024px;
+    }
   }
-}
-
-@media all and (device-width: 320px) and (device-height: 568px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 320px;
+  
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 768px;
+    }
   }
-}
-
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 1024px;
+  
+  @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 1366px;
+    }
   }
-}
-
-@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 768px;
+  
+  @media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 1024px;
+    }
   }
-}
-
-@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 1366px;
+  
+  
+  @media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 1112px;
+    }
   }
-}
-
-@media all and (device-width: 1024px) and (device-height: 1366px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 1024px;
+  
+  @media all and (device-width: 1112px) and (device-height:834px) and (orientation:landscape){
+    .home-image{ 
+      background-attachment:scroll;
+      height: 834px;
+    }
   }
-}
-
-
-@media all and (device-width: 834px) and (device-height: 1112px) and (orientation:portrait){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 1112px;
-  }
-}
-
-@media all and (device-width: 1112px) and (device-height:834px) and (orientation:landscape){
-  .home-image{ 
-    background-attachment:scroll;
-    height: 834px;
-  }
-}
-
+  
+  
