@@ -100,6 +100,7 @@ h1 {
   background-size: 100%;
   background-size: cover;
   overflow:hidden;
+
 }
 
 .home-image p{
@@ -512,11 +513,22 @@ h1 {
     grid-column:4/-1;
     grid-row:2/3;
   }
+
+  .home-image{ 
+    height: 736px;
+  }
 }
 
 @media all and (device-width: 414px) and (device-height: 736px) and (orientation:portrait){
   .home-image{ 
     background-attachment:scroll;
     height: 736px;
+  }
+}
+
+@media all and (device-width: 414px) and (device-height: 736px) and (orientation:landscape){
+  .home-image{ 
+    background-attachment:scroll;
+    height: 414px;
   }
 }
