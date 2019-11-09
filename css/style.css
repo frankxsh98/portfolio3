@@ -91,10 +91,10 @@ h1 {
 
 .home-image{
   position: relative;
-  height:532px;
+  height:100vh;
   background-color: black;
   background-image: url("../images/main_page.png");
-/*   background-attachment: fixed; */
+  background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
   background-size: 100%;
